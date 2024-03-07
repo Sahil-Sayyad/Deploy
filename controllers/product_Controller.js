@@ -214,8 +214,6 @@ module.exports.orderHistory = async (req, res) => {
       user: req.user._id,
     });
 
-    console.log("Quantity : ", cartinfo);
-
     for (let item of cartinfo) {
       // console.log("Quantity : ", item.quantity);
 
