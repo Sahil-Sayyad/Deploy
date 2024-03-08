@@ -7,7 +7,7 @@ const Address = require("../models/address");
 module.exports.home = async (req, res) => {
   try {
     const products = await Product.find({});
-
+    console.log(products);
     if (products) {
       return res.render("home", {
         title: "Anime Aura",
