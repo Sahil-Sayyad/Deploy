@@ -31,7 +31,10 @@ module.exports.create = async (req, res) => {
       console.log("Password not matched");
       return res.redirect("/user/sign-up");
     }
-
+     if(!validator.validate(req.body.email)){
+       req.flash("error","Please enter correct email");
+       return res.redirect('back');
+    };
     //check if the user already exists
     let user = await User.findOne({ email: req.body.email });
 
