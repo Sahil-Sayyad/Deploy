@@ -5,13 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "tail":"npx tailwindcss -i ./public/stylesheets/main.css -o ./public/stylesheets/tailwind.css --watch",
-    "dev": "nodemon app.js"
-  },
-  "nodemonConfig": {
-    "ignore": ["**/test/**", "**/docs/**"],
-    "ext": "js,json,mjs,cjs,ejs"
+    "start": "nodemon app.js"
   },
   "keywords": [
     "shopping"
@@ -25,6 +19,7 @@
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.9",
+    "email-validator": "^2.0.4",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.18.0",
