@@ -1,6 +1,7 @@
 //import requried packeges
 const User = require("../models/user");
 const brcypt = require("bcrypt");
+var validator = require("email-validator");
 
 //render sign-up page
 module.exports.signUp = async (req, res) => {
