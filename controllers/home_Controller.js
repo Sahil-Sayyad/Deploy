@@ -7,7 +7,6 @@ const Address = require("../models/address");
 module.exports.home = async (req, res) => {
   try {
     const products = await Product.find({});
-    console.log(products);
     if (products) {
       return res.render("home", {
         title: "Anime Aura",
@@ -50,14 +49,6 @@ module.exports.profile = async (req, res) => {
       })
       .populate("address");
 
-    // .populate({
-    //   path: "order",
-    //   populate: {
-    //     path: "product",
-    //     module: "Product",
-    //   },
-    // })
-
     let address = await Address.find({});
     let length = 0;
     let addressinfo;
@@ -75,8 +66,7 @@ module.exports.profile = async (req, res) => {
 
         if (order.billing.product) {
           order.billing.product.forEach(product => {
-            console.log(product.title);
-            console.log(product.price);
+          
           });
         }
       });

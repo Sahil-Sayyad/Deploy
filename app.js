@@ -21,6 +21,8 @@ app.use(express.static("./public"));
 //set up the view engine
 app.set("view engine", "ejs");
 app.set("views", "./views");
+
+app.use("/uploads", express.static(__dirname + "/uploads"));
 //handle session cookie
 app.use(
   session({
