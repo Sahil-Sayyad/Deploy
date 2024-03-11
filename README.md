@@ -1,4 +1,5 @@
 Test User
 
-username : test
+username : test@gmail.com
+<br>
 password : test@1234
