@@ -53,7 +53,6 @@ app.use(customMware.setFlash);
 //express routes handler
 app.use("/", require("./routes"));
 //start the server
-
 app.listen(port, (err) => {
   if (err) {
     console.log(`Server Error ${err}`);
